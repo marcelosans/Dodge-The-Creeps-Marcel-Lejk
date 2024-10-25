@@ -27,16 +27,15 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
+radius = 36.0
+height = 20.0001
 
 [node name="Mob" type="RigidBody2D"]
-position = Vector2( -52, 30 )
+position = Vector2( -34, 28 )
 rotation = 1.5708
 collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource( 7 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
