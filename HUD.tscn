@@ -15,7 +15,7 @@ custom_fonts/font = ExtResource( 1 )
 text = "0"
 align = 1
 
-[node name="Missatge" type="Label" parent="."]
+[node name="Message" type="Label" parent="."]
 margin_left = 64.0
 margin_top = 128.0
 margin_right = 433.0
