@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://new_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://HUD.gd" type="Script" id=2]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="ScoreLabel" type="Label" parent="."]
+margin_left = 216.0
+margin_top = 32.0
+margin_right = 261.0
+margin_bottom = 110.0
+custom_fonts/font = ExtResource( 1 )
+text = "0"
+align = 1
+
+[node name="Missatge" type="Label" parent="."]
+margin_left = 64.0
+margin_top = 128.0
+margin_right = 433.0
+margin_bottom = 288.0
+custom_fonts/font = ExtResource( 1 )
+text = "Dodge The
+Creeps"
+align = 1
+
+[node name="StartButton" type="Button" parent="."]
+margin_left = 160.0
+margin_top = 376.0
+margin_right = 340.0
+margin_bottom = 476.0
+custom_fonts/font = ExtResource( 1 )
+text = "Start"
+
+[node name="MessageTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="timeout" from="MessageTimer" to="." method="_on_MessageTimer_timeout"]
