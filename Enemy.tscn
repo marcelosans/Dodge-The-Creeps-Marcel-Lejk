@@ -30,22 +30,22 @@ animations = [ {
 radius = 36.0
 height = 20.0001
 
-[node name="Mob" type="RigidBody2D"]
+[node name="Mob" type="RigidBody2D" groups=["mobs"]]
 position = Vector2( -34, 28 )
 rotation = 1.5708
 collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource( 7 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." groups=["mobs"]]
 frames = SubResource( 1 )
 animation = "fly"
 speed_scale = 0.75
 playing = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["mobs"]]
 shape = SubResource( 2 )
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." groups=["mobs"]]
 
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
