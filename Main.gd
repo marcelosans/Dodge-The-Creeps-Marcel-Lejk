@@ -20,6 +20,7 @@ func _ready():
 #func _process(delta):
 #	pass
 func new_game():
+	$Music.play()
 	score = 0
 	$Player.start($StartPosition.position)
 	$StartTimer.start()
@@ -29,9 +30,12 @@ func new_game():
 
 
 func game_over():
+	$Music.stop()
 	$ScoreTimer.stop()
 	$MobTimer.stop()
 	$HUD.show_game_over()
+	$DeathSound.play()
+	
 
 
 func _on_MobTimer_timeout():
