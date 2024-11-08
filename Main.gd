@@ -31,6 +31,7 @@ func new_game():
 
 func game_over():
 	$Music.stop()
+	$DeathSound.play()
 	$ScoreTimer.stop()
 	$MobTimer.stop()
 	$HUD.show_game_over()
